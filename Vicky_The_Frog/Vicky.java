@@ -30,6 +30,6 @@ public class Vicky
             distance = distance - 1;
         }
 
-        System.out.println(fiveM + threeM + oneM);
+        System.out.println("Time : " + fiveM + threeM + oneM);
     }
 }
