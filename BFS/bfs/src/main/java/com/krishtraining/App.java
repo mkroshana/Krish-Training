@@ -1,30 +1,38 @@
 package com.krishtraining;
 
 import java.util.*;
+
 /**
- * Hello world!
+ * Below code is written by the help of
+ * https://www.programiz.com/dsa/graph-bfs
+ * Breadth first search tutorial
  */
-public class Graph 
+
+public class App
 {
-    private int V;
+  private int V;
   private LinkedList<Integer> adj[];
 
   // Create a graph
-  Graph(int v) {
+  App(int v)
+  {
     V = v;
     adj = new LinkedList[v];
     for (int i = 0; i < v; ++i)
+    {
       adj[i] = new LinkedList();
+    }
   }
 
   // Add edges to the graph
-  void addEdge(int v, int w) {
+  void addEdge(int v, int w)
+  {
     adj[v].add(w);
   }
 
   // BFS algorithm
-  void BFS(int s) {
-
+  void BFS(int s)
+  {
     boolean visited[] = new boolean[V];
 
     LinkedList<Integer> queue = new LinkedList();
@@ -46,9 +54,10 @@ public class Graph
       }
     }
   }
-    public static void main( String[] args )
-    {
-        Graph g = new Graph(4);
+
+  public static void main(String[] args)
+  {
+    App g = new App(4);
 
     g.addEdge(0, 1);
     g.addEdge(0, 2);
